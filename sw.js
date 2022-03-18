@@ -18,25 +18,25 @@ const AppCache = [
 
 self.addEventListener("install", (e)=>{
 
-    e.waitUntil(
-        caches.open(AppCacheName).then(cache=>{
-            cache.addAll(AppCache);
-        })
-    );
+//     e.waitUntil(
+//         caches.open(AppCacheName).then(cache=>{
+//             cache.addAll(AppCache);
+//         })
+//     );
 
 });
 
 self.addEventListener("fetch", (e)=>{
 
-    e.respondWith(
-        caches.match(e.request).then(resCache=>{
-            return resCache || fetch(e.request).then(res=>{
-                caches.open(AppCacheName).then(cache=>{
-                    cache.put(e.request, res.clone());
-                    return res;
-                });
-            })
-        })
-    );
+//     e.respondWith(
+//         caches.match(e.request).then(resCache=>{
+//             return resCache || fetch(e.request).then(res=>{
+//                 caches.open(AppCacheName).then(cache=>{
+//                     cache.put(e.request, res.clone());
+//                     return res;
+//                 });
+//             })
+//         })
+//     );
 
 });
