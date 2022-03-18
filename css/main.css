@@ -1,0 +1,80 @@
+@import "https://cdn.com/google/google-material-icons/icon.css";
+@import "https://vectoricons.com/typefaces/css/?display=swap&family=Euclid+Square";
+
+:root{
+
+    --ff0:"Euclid Square", sans-serif;
+
+    --fs-3:8px;
+    --fs-2:10px;
+    --fs-1:12px;
+    --fs0:14px;
+    --fs1:16px;
+    --fs2:18px;
+    --fs3:20px;
+    --fs4:22px;
+    --fs5:24px;
+
+    --c_0:transparent;
+    --c_1:white;
+
+    --c_2:white;
+    --c_3:black;
+
+    --c_4:black;
+
+    --c_hh:black;
+    --c_mh:white;
+    --c_sh:hsl(50 100% 50%);
+
+    --c_p:hsl(0 0% 100%);
+    --c_s:hsl(340 100% 50%);
+    --c_s0:hsl(340 100% 48%);
+
+    --c_f:hsl(0 0% 100%);
+
+    --c_w:white;
+    --c_b:black;
+    --c_t:transparent;
+
+}
+
+
+@media (prefers-color-scheme:dark){
+
+:root{
+
+    --c_0:transparent;
+    --c_1:hsl(340 100% 50%);
+
+    --c_2:hsl(340 100% 50%);
+    --c_3:white;
+
+    --c_4:hsl(340 100% 50%);
+
+    --c_hh:hsl(340 100% 50%);
+    --c_mh:white;
+    --c_sh:hsl(50 100% 50%);
+
+    --c_p:hsl(0 0% 94%);
+    --c_s:hsl(0 0% 8%);
+    --c_s0:hsl(0 0% 6%);
+
+    --c_f:hsl(0 0% 94%);
+
+}
+
+}
+
+
+html{ -webkit-tap-highlight-color:transparent; }
+
+html::-webkit-scrollbar{
+    width:0;
+    height:0;
+}
+
+body{
+    margin:0;
+    background-color:var(--c_s);
+}

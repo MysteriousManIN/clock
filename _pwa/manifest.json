@@ -1,0 +1,21 @@
+{
+    "name":"Clock",
+    "short_name":"Clock",
+    "description":"Clock application with stopwatch.",
+    "display":"standalone",
+    "background_color":"white",
+    "theme_color":"hsl(340 100% 50%)",
+    "icons":[
+        {
+            "src":"144.png",
+            "type":"image/png",
+            "sizes":"144x144"
+        },
+        {
+            "src":"512.png",
+            "type":"image/png",
+            "sizes":"512x512"
+        }
+    ],
+    "start_url":"http://127.0.0.1:5500/clock/"
+}

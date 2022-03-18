@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=1" >
+    <meta name="theme-color" content="#ff0055" />
+    <meta name="author" content="Chetan Saini" />
+    <meta name="description" content="Clock applicatoin with stopwatch" >
+    <meta name="keywords" content="Clock, Stopwatch, Timer, Chetan Saini" >
+    <title>Clock</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://cdn.com/google/google_jquery.min.js" ></script>
+    <link rel="icon" href="_pwa/favicon.svg" >
+    <link rel="stylesheet" href="css/index.css" >
+    <link rel="manifest" href="_pwa/manifest.json" >
+</head>
+<body>
+
+<nav>
+    <button id="stopwatch_btn" class="btn" type="button" >
+        <span class="material-icons">timer</span>
+        <span>Stopwatch</span>
+    </button>
+</nav>
+
+<main>
+
+    <div id="clock_block" class="clock_block" >
+        <div class="clock_pic" >
+            <svg id="clock" class="clock" viewBox="0 0 24 24" >
+                <line class="hours head" x1="12" y1="13" x2="12" y2="4" />
+                <line class="minutes head" x1="12" y1="13" x2="12" y2="3" />
+                <line class="seconds head" x1="12" y1="14" x2="12" y2="2" />
+                <circle class="center" cx="12" cy="12" r="0.2" />
+                <g>
+                    <g>
+                        <g style="transform-origin:12px; transform:rotate(0deg);" >
+                            <circle cx="12" cy="1" r="0.4" />
+                            <circle cx="12" cy="23" r="0.4" />
+                            <circle cx="1" cy="12" r="0.4" />
+                            <circle cx="23" cy="12" r="0.4" />
+                        </g>
+                        <g style="transform-origin:12px; transform:rotate(30deg);" >
+                            <circle cx="12" cy="1" r="0.2" />
+                            <circle cx="12" cy="23" r="0.2" />
+                            <circle cx="1" cy="12" r="0.2" />
+                            <circle cx="23" cy="12" r="0.2" />
+                        </g>
+                        <g style="transform-origin:12px; transform:rotate(60deg);" >
+                            <circle cx="12" cy="1" r="0.2" />
+                            <circle cx="12" cy="23" r="0.2" />
+                            <circle cx="1" cy="12" r="0.2" />
+                            <circle cx="23" cy="12" r="0.2" />
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div id="dateAndTime" class="clock_time_date" >
+            <span>00:00<span>:00 AM</span></span>
+            <span>Day, 00 Month 0000</span>
+        </div>
+    </div>
+
+    <div id="stopwatch_block" class="stopwatch_block" >
+        <div id="swTime" class="time" >00:00:00<span>.000</span></div>
+        <div>
+            <button id="swStartAndStop" class="btn" type="button" value="Start" >
+                <span class="material-icons">play_arrow</span>
+                <span>Start</span>
+            </button>
+            <button id="swReset" class="btn" type="button" value="Reset" >
+                <span class="material-icons">restore</span>
+                <span>Restore</span>
+            </button>
+        </div>
+    </div>
+
+</main>
+
+
+<script src="js/clock.js" ></script>
+<script src="js/index.js" ></script>
+<script src="app.js" ></script>
+</body>
+</html>
