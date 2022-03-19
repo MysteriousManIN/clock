@@ -1,2 +1,2 @@
 # Clock
-Clock app with stopwatch
+Clock app with stopwatch. Dark mode also available.
