@@ -3,12 +3,18 @@
 const AppCacheName = "clock-cache";
 const AppCache = [
     "/",
+    "pwa/",
+    "css/",
+    "js/",
     "index.htm",
     "css/main.css",
     "css/index.css",
     "js/clock.js",
     "js/index.js",
     "pwa/favicon.svg",
+    "pwa/manifest.json",
+    "app.js",
+    "sw.js",
     "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js",
     "https://vectoricons.000webhostapp.com/typefaces/css/?display=swap&family=Euclid+Square:w@400",
     "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined",
