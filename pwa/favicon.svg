@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st12{fill:#FF0055;}
+	.st13{fill:#E0004B;}
+	.st14{fill:none;stroke:#E7D000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st15{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st16{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+	.st17{fill:#FFE42E;}
+</style>
+<g>
+	<circle class="st12" cx="12" cy="12" r="10"/>
+	<path class="st13" d="M20.2,6.2c0.3,0.9,0.4,1.9,0.4,2.9c0,5.5-4.5,10-10,10c-3.4,0-6.4-1.7-8.2-4.2C3.7,19,7.5,22,12,22
+		c5.5,0,10-4.5,10-10C22,9.9,21.3,7.9,20.2,6.2z"/>
+	<line class="st14" x1="12" y1="10" x2="12" y2="20"/>
+	<line class="st15" x1="10.6" y1="12.3" x2="19.8" y2="10"/>
+	<line class="st16" x1="13" y1="13" x2="7.4" y2="7.4"/>
+	<circle class="st17" cx="12" cy="12" r="0.5"/>
+</g>
+</svg>
