@@ -148,7 +148,7 @@ $(()=>{
 if(('wakeLock' in navigator){
 
 // screen wake lock
-navigator.wakeLock.request('screen').then(lock => { console.log(lock); });
+navigator.wakeLock.request('screen').then(lock => { });
 
 }
 
