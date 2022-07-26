@@ -221,7 +221,7 @@ body{
 
 .svg_clock > .hours_hand_2{
 	stroke:var(--hours_hand);
-	stroke-width:0.3px;
+	stroke-width:0.5px;
 }
 
 .svg_clock > .minutes_hand{
