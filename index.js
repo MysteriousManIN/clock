@@ -143,14 +143,10 @@ $(()=>{
 		darkLight.matches ? themeColor.attr("content", "#1f1f1f") : themeColor.attr("content", "#ffd000"); };
 	darkLight.onchange = () => { changeMetaThemeColor(); };
 	changeMetaThemeColor();
-
-if("wakeLock" in window.navigator){
-
-// screen wake lock
-window.navigator.wakeLock.request("screen").then((lock) => {});
-
-}
-
-
+	
+	// screen wake lock
+	if("wakeLock" in window.navigator){
+		window.navigator.wakeLock.request("screen").then((lock) => {});
+	}
         
 });
