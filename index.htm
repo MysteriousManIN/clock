@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=1" >
-    <meta name="theme-color" content="#ff0055" />
-    <meta name="author" content="Chetan Saini" />
-    <meta name="description" content="Clock and stopwatch with dark mode feature" >
-    <meta name="keywords" content="Clock, Stopwatch, Timer, Chetan Saini" >
-    <title>Clock</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
-    <link rel="icon" href="pwa/favicon.svg" >
-    <link rel="stylesheet" href="css/index.css" >
-    <link rel="manifest" href="pwa/manifest.json" >
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" >
+	<meta name="theme-color" content="#ffd000" >
+	<meta name="description" content="Simple clock with stopwatch and auto dark mode" >
+	<meta name="keywords" content="clock, stopwatch" >
+	<meta name="author" content="Chetan Saini" >
+	<title>Clock</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+	<script src="https://chetansainiakamysteriousman.on.drv.tw/web_store/js_lib/clock/v1/clock.min.js" ></script>
+	<link rel="stylesheet" href="index.css" />
+	<script src="index.js" ></script>
+	<link rel="icon" href="pwa/app-icons/favicon.png" />
+	<link rel="manifest" href="pwa/manifest.json" />
+	<script src="pwa/app.js" ></script>
 </head>
 <body>
 
-<nav>
-    <button id="stopwatch_btn" class="btn" type="button" >
-        <span class="material-icons-outlined">timer</span>
-        <span>Stopwatch</span>
-    </button>
+<nav class="nav_bar" >
+
+	<div>
+		<button id="fullscreenBtn" title="Fullscreen" class="btn remixicon_os20" type="button" value="fullscreen" >fullscreen</button>
+		<button id="stopwatchBtn" title="Stopwatch" class="btn remixicon_os20" type="button" >timer</button>
+	</div>
+
 </nav>
 
-<main>
+<main class="main" >
 
-    <div id="clock_block" class="clock_block" >
-        <div class="clock_pic" >
-            <svg id="clock" class="clock" viewBox="0 0 24 24" >
-                <line class="hours head" x1="12" y1="13" x2="12" y2="4" />
-                <line class="minutes head" x1="12" y1="13" x2="12" y2="3" />
-                <line class="seconds head" x1="12" y1="14" x2="12" y2="2" />
-                <circle class="center" cx="12" cy="12" r="0.2" />
-                <g>
-                    <g>
-                        <g style="transform-origin:12px; transform:rotate(0deg);" >
-                            <circle cx="12" cy="1" r="0.4" />
-                            <circle cx="12" cy="23" r="0.4" />
-                            <circle cx="1" cy="12" r="0.4" />
-                            <circle cx="23" cy="12" r="0.4" />
-                        </g>
-                        <g style="transform-origin:12px; transform:rotate(30deg);" >
-                            <circle cx="12" cy="1" r="0.2" />
-                            <circle cx="12" cy="23" r="0.2" />
-                            <circle cx="1" cy="12" r="0.2" />
-                            <circle cx="23" cy="12" r="0.2" />
-                        </g>
-                        <g style="transform-origin:12px; transform:rotate(60deg);" >
-                            <circle cx="12" cy="1" r="0.2" />
-                            <circle cx="12" cy="23" r="0.2" />
-                            <circle cx="1" cy="12" r="0.2" />
-                            <circle cx="23" cy="12" r="0.2" />
-                        </g>
-                    </g>
-                </g>
-            </svg>
-        </div>
-        <div id="dateAndTime" class="clock_time_date" >
-            <span>00:00<span>:00 AM</span></span>
-            <span>Day, 00 Month 0000</span>
-        </div>
-    </div>
+	<section id="clockBlock" class="clock_block" >
 
-    <div id="stopwatch_block" class="stopwatch_block" >
-        <div id="swTime" class="time" >00:00:00<span>.000</span></div>
-        <div>
-            <button id="swStartAndStop" class="btn" type="button" value="Start" >
-                <span class="material-icons">play_arrow</span>
-                <span>Start</span>
-            </button>
-            <button id="swReset" class="btn" type="button" value="Reset" >
-                <span class="material-icons">restore</span>
-                <span>Restore</span>
-            </button>
-        </div>
-    </div>
+		<div>
+			<svg id="svgClock" class="svg_clock" viewBox="0 0 24 24" >
+				<circle class="center_1" cx="12" cy="12" r="0.4" />
+				<line class="minutes_hand" x1="12" y1="12" x2="12" y2="4" />
+				<line class="minutes_hand_2" x1="12" y1="11" x2="12" y2="4" />
+				<line class="hours_hand" x1="12" y1="12" x2="12" y2="6" />
+				<line class="hours_hand_2" x1="12" y1="11" x2="12" y2="6" />
+				<circle class="center" cx="12" cy="12" r="0.2" />
+				<line class="seconds_hand" x1="12" y1="13" x2="12" y2="4" />
+			</svg>
+		</div>
+
+		<div>
+			<div class="date_time" >
+				<div id="clockTime" class="time" >
+					<span>00:</span><span>00</span><span>:00</span><span>AM</span>
+				</div>
+				<div id="clockDate" class="date" >Day, 00 Month</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section id="stopwatchBlock" class="stopwatch_block" >
+
+		<div>
+			<div id="stopwatchTime" class="time" >
+				<span>00:</span><span>00</span><span>.000</span>
+			</div>
+		</div>
+
+		<div>
+			<button id="startAndStopSWBtn" class="btn" type="button" value="start" >Start</button>
+			<button id="resetSWBtn" class="btn" type="button" >Reset</button>
+			<button id="lapSWBtn" class="btn" type="button" >Lap</button>
+		</div>
+
+		<div class="laps_btn_block" >
+			<button id="lapsBtn" class="laps_btn" type="button" >Laps <span class="remixicon_os20" >arrow-right-s</span></button>
+		</div>
+
+		<div id="lapsBlock" class="laps_block" ></div>
+
+	</section>
 
 </main>
 
-
-<script src="js/clock.js" ></script>
-<script src="js/index.js" ></script>
-<script src="app.js" ></script>
+<footer class="footer" >
+	<div>
+		<div>Designed &amp; Coded by</div>
+		<div>Chetan Saini</div>
+	</div>
+</footer>
+	
 </body>
 </html>
