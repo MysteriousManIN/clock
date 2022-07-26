@@ -146,7 +146,8 @@ $(()=>{
 
 if("wakeLock" in window.navigator){
 
-alert("hello");
+// screen wake lock
+window.navigator.wakeLock.request("screen").then((lock) => {});
 
 }
 
