@@ -144,7 +144,7 @@ $(()=>{
 	darkLight.onchange = () => { changeMetaThemeColor(); };
 	changeMetaThemeColor();
 
-if('wakeLock' in navigator){
+if("wakeLock" in window.navigator){
 
 alert("hello");
 
