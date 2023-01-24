@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+    <title>Clock</title>
+    <meta name="theme-color" content="#ebebeb" >
+    <meta name="description" content="Simple clock" >
+    <meta name="author" content="Chetan Saini" >
+    <meta name="keyword" content="clock, watch, digital, date, time" >
+    <link rel="preload" as="style" href="main.css" />
+    <!-- <link rel="preload" as="script" href="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" /> -->
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="index.css" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer ></script> -->
+    <script src="https://cdn.com/google/google_jquery.min.js" defer ></script>
+    <script src="o-index.js" defer ></script>
+</head>
+<body>
+    
+    <main>
+
+        <section class="section-1" >
+
+            <div class="clock-box" >
+                <svg id="svg-clock" class="clock" viewBox="0 0 24 24" >
+                    <path class="day-arc" />
+                    <line class="hours-hand-1" x1="12" y1="12" x2="12" y2="6" />
+                    <line class="hours-hand-2" x1="12" y1="11" x2="12" y2="6" />
+                    <line class="minutes-hand-1" x1="12" y1="12" x2="12" y2="4" />
+                    <line class="minutes-hand-2" x1="12" y1="11" x2="12" y2="4" />
+                    <circle class="center-1" cx="12" cy="12" r="0.4" />
+                    <circle class="center-2" cx="12" cy="12" r="0.2" />
+                    <line class="seconds-hand" x1="12" y1="13" x2="12" y2="4" />
+                </svg>
+            </div>
+
+            <div class="time-box" >
+                <div>
+                    <span id="t-hours" >00</span>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <span id="t-minutes" >00</span>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <span id="t-seconds" >00</span>
+                    <span>Seconds</span>
+                </div>
+            </div>
+
+            <div class="date-box" >
+                <span id="d-day" >Wed</span>
+                <span id="d-date" >Jan 23, 2023</span>
+            </div>
+
+        </section>
+        
+    </main>
+
+    <footer class="footer" >
+        <div class="dac" >
+            <span>Designed & Coded by</span>
+            <span>Chetan Saini</span>
+        </div>
+    </footer>
+
+</body>
+</html>

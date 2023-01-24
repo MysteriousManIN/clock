@@ -1,0 +1,114 @@
+/*---- fonts ----*/
+
+@font-face{
+	font-family: 'Config Condensed';
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('https://vectoricons.com/typefaces/coll/c/Config%20Condensed/woff/ConfigCondensed-Regular.woff') format('woff');
+}
+
+
+@font-face{
+	font-family: 'Config Condensed';
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: url('https://vectoricons.com/typefaces/coll/c/Config%20Condensed/woff/ConfigCondensed-Medium.woff') format('woff');
+}
+
+/*---------------*/
+
+:root{
+
+    --ff_p: "Config Condensed", sans-serif;
+
+    --fs_1: 8px;
+    --fs_2: 10px;
+    --fs_3: 12px;
+    --fs_4: 14px;
+    --fs_5: 16px;
+    --fs_6: 18px;
+    --fs_7: 20px;
+    --fs_8: 22px;
+    --fs_9: 24px;
+
+    --c_0: hsl(0 0% 92%);
+    --c_1: hsl(0 0% 12%);
+    --c_2: hsl(0 0% 86%); 
+    --c_3: hsl(0 0% 40%); 
+
+}
+
+.clock{
+    --color-1:#db4437;
+    --color-2:hsl(0 0% 12%);
+    --color-3:hsl(0 0% 86%);
+    display:block;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+}
+
+.clock > .center-1{
+    fill:var(--color-2);
+}
+
+.clock > .center-2{
+    fill:var(--color-1);
+}
+
+.clock > line[class*="hand"]{
+    transform-origin:12px 12px;
+    stroke-linecap:round;
+    transition:all 0ms linear;
+}
+
+.clock > .seconds-hand{
+    stroke:var(--color-1);
+    stroke-width:0.1px;
+    transform:rotate(0deg);
+}
+
+.clock > :is(.minutes-hand-1, .minutes-hand-2){
+    stroke:var(--color-2);
+}
+
+.clock > .minutes-hand-1{
+    stroke-width:0.1px;
+}
+
+.clock > .minutes-hand-2{
+    stroke-width:0.3px;
+}
+
+.clock > :is(.hours-hand-1, .hours-hand-2){
+    stroke:var(--color-2);
+}
+
+.clock > .hours-hand-1{
+    stroke-width:0.1px;
+}
+
+.clock > .hours-hand-2{
+    stroke-width:0.5px;
+}
+
+.clock > .day-arc{
+    fill:var(--color-3);
+}
+
+
+
+body{
+    margin:0;
+    background-color:var(--c_0);
+    color:var(--c_1);
+    font-family:var(--ff_p);
+    font-size:var(--fs_5);
+}
+
+main > section{
+    padding:64px 128px;
+    box-sizing:border-box;
+}
